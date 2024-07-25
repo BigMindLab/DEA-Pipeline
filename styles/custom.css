@@ -1,0 +1,13 @@
+/* styles/custom.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #3498db;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
