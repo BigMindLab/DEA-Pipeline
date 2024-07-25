@@ -5,6 +5,9 @@ Counts/*.sf
 *.tsv
 *.xlsx
 
+# Exclude research info
+.Rmd
+
 # History files
 .Rhistory
 .Rapp.history
