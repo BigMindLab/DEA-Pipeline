@@ -56,8 +56,8 @@ counts_dir <- "./Counts"
 
 This guide provides an overview of what a Differential Expression Analysis report created by the BigMind team contains. For the integrated and automated analysis, we utilized functions from our custom R package, [OmicsKit](https://github.com/BigMindLab/OmicsKit).
 
-## **Preprocessing: Counts per Sample**
-### Visualizing Samples Data
+# **Preprocessing: Counts per Sample**
+## Visualizing Samples Data
 Sample metadata is crucial for connecting bioinformatics results to biological significance. The first step in our analysis is to clean the data and prepare it for downstream library requirements.
 ```{r, echo = FALSE}
 sampledata <- data.frame(read.xlsx(sample_data))
@@ -86,7 +86,7 @@ sampledata_disp$Test <- ifelse(sampledata_disp$Test == "N", "Undetected", "Detec
 knitr::kable(sampledata_disp)
 ```
 
-### Managing Count Files
+## Managing Count Files
 Identifying samples with abnormal counts can highlight outliers that may need to be excluded from analysis to avoid skewed results.
 ```{r, echo = FALSE}
 count_files <- file.path(counts_dir, paste0(sampledata$id, "_quant.sf"))
@@ -218,13 +218,13 @@ nice_colors <- brewer.pal(12,"Paired")
 #}
 
 # Filtered
-p.filt <- ggplot(data = sampledata, aes(x = id, y = filtered, fill = group)) +
+p.filt <- ggplot(data = sampledata, aes(x = as.character(num), y = filtered, fill = group)) +
   theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
   geom_bar(stat="identity", color="black", linewidth = 0.3) +
   scale_fill_manual(name = "Group", values = nice_colors,
                     breaks = c("A/Tc-", "B/Tc-", "A/Tc+", "B/Tc+"),
                     labels = c("A", "B", "C", "D")) +
-  theme(axis.text.x = element_blank()) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   scale_y_continuous(expand = expansion(mult = c(0, .05)), labels = scales::comma, breaks = seq(0,7e+7,by=0.5e+7)) +
   xlab("Sample ID") + ylab("Filtered") + theme(axis.title=element_text(size=16))
 
