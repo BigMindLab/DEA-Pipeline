@@ -1,3 +1,9 @@
+# Salmon Count files
+Counts/*.sf
+
+# TSV files
+*.tsv
+
 # History files
 .Rhistory
 .Rapp.history
