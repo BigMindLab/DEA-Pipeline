@@ -1,4 +1,4 @@
-# RNAseq-Pipeline
-BigMind's Workflow for Transcriptomic Analysis
+# RNAseq Pipeline
+Workflow for Accurate and Reproducible Transcriptomic Analysis
 
 ## Contributors
