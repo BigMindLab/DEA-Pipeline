@@ -7,6 +7,10 @@ h1 {
   color: #3498db;
 }
 
+h1.title {
+  font-weight: bold;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.5;
