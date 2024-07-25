@@ -6,7 +6,7 @@ Counts/*.sf
 *.xlsx
 
 # Exclude research info
-.Rmd
+*.Rmd
 
 # History files
 .Rhistory
