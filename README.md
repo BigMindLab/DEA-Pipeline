@@ -1,8 +1,5 @@
 # Differential Expression Analysis Pipeline
 
-## Daniel Guevara
-**Date:** 2024-07-25
-
 This guide provides an overview of what a Differential Expression Analysis report created by the BigMind team contains. For the integrated and automated analysis, we utilized functions from our custom R package, OmicsKit.
 
 ### 1. Preprocessing: Counts per Sample
