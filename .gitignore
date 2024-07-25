@@ -1,8 +1,9 @@
 # Salmon Count files
 Counts/*.sf
 
-# TSV files
+# TSV and XLSX files
 *.tsv
+*.xlsx
 
 # History files
 .Rhistory
